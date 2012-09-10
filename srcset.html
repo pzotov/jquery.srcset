@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image srcset Polyfill</title>
+    <style type="text/css">
+        img {
+            max-width: 100%; /*make images responsive*/
+        }
+
+        .main {
+            font-family: "Segoe UI",Helvetica,Tahoma,Arial,Verdana,Sans-Serif;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Srcset Polyfill</h1>
+        <p>Resize the page to load the larger image.</p>
+        <img src="./img/image-480px.jpg" srcset="./img/image-768px.jpg 768w, ./img/image-979px.jpg 979w" alt="srcset example" />
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/img.srcset.polyfill.js"></script>
+</body>
+</html>

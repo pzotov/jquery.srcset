@@ -1,0 +1,46 @@
+/* http://www.studiopress.com/design/css-background-size-graphics.htm */
+
+.sprite {
+	background: transparent url('./img/sprites.png');
+	background-position: -99999999px, -99999999px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+}
+
+.sprite-NOSE_E{ background-position: 0 -105px; }
+.sprite-NOSE_E:hover,
+.sprite-NOSE_E.hover{ background-position: 0 0; }
+
+.sprite-NOSE_N{ background-position: 0 -315px; }
+.sprite-NOSE_N:hover,
+.sprite-NOSE_N.hover{ background-position: 0 -210px; }
+
+.sprite-NOSE_O{ background-position: 0 -526px; }
+.sprite-NOSE_O:hover,
+.sprite-NOSE_O.hover{ background-position: 0 -420px; }
+
+.sprite-NOSE_S{ background-position: 0 -737px; }
+.sprite-NOSE_S:hover,
+.sprite-NOSE_S.hover{ background-position: 0 -632px; }
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), 
+screen and (max-moz-device-pixel-ratio: 2) {
+
+	/* how to calculate the background size?                      */
+	/* high res image height / target image height = x            */
+	/* original sprite height / x = background-size height        */
+	/* 120/60 = 2                                                 */
+	/* 1584/2 = 792                                               */
+	
+    .sprite {
+		background-image: url('./img/sprites@2x.png');
+		background-size: auto 792px;
+	}
+	
+	.loadspeed-slow .bglogo {
+		background-color: #DB0D00;
+	}
+}

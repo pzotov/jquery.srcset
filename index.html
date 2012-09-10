@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Pngy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="sprites.css" />
+	
+	<script>
+		var head_conf = { screens: [500, 700, 900], section: '-section', page: '-page' };
+	</script>
+	<script src="./js/head.min.js"></script>
+
+</head>
+<body>
+<!--
+	<dl>
+		<dt class="bandwidth">bandwidth</dt>
+			<dd class="fast">Fast</dd>
+			<dd class="normal">Normal</dd>
+			<dd class="slow">Slow</dd>
+	</dl>
+-->
+	<div class="wrapper">
+		
+		<h1>Image srcset</h1>
+		
+		<h2 id="pingspeed">Load Speed: <b></b></h2>
+		
+		<div class="bglogo">
+			<a class="sprite sprite-NOSE_N" title="Nose"><span>N</span></a>
+			<a class="sprite sprite-NOSE_O" title="nOse"><span>O</span></a>
+			<a class="sprite sprite-NOSE_S" title="noSe"><span>S</span></a>
+			<a class="sprite sprite-NOSE_E" title="nosE"><span>E</span></a>
+		</div>
+		
+		<img 
+			class="bandwidth schiff" 
+			src="./img/schiff/img_450-slow.jpg" 
+			srcset="./img/schiff/img_450@2x-slow.jpg 2x, ./img/schiff/img_900-slow.jpg 500w, ./img/schiff/img_900@2x-slow.jpg 500w 2x" 
+			alt="our logo" />
+		
+		<div class="logo">
+			<img 
+				class="bandwidth" 
+				src="./img/logo-slow.jpg" 
+				srcset="./img/logo@2x-slow.jpg 2x" 
+				alt="our logo" />
+		</div>
+					
+	</div>
+
+	<script>
+		head.feature('srcset', function() {
+    		var tag = 'srcset' in document.createElement('img');
+    		return !!tag.canHandleSRCSet;
+		});
+		head.js('./js/jquery.js', './js/jquery.srcset.js', function() {
+      		if ( !head.srcset ) {
+           		jQuery('img[srcset]').srcset({ 
+					display_results: '#pingspeed b',
+					limits: {
+						maximum: 200,
+						fast: 100,
+						medium: 50,
+						slow: 0
+					}
+				});
+      		}
+      		jQuery('a.sprite').on('click', function(){
+      			jQuery(this).toggleClass('hover');
+      		});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+	font-family: "Helvtica Neue", Arial, Helvetica, sans-serif;
+	line-height: 1.3em;	
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
+
+div {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.hideme {
+	display: none;
+}
+.logo,
+.bglogo  {
+	margin: 0 auto;
+	width: 290px;
+	height: 100px;
+	margin-top: 10px;
+}
+
+.schiff {
+	/* margin: 0 auto; */
+}
+
+.bglogo a {
+	margin-top: 21px;
+	text-indent: -99999999px;
+}
+.loadspeed-maximum .bglogo {
+	background-color: #9886D0;
+}
+.loadspeed-fast .bglogo {
+	background-color: #C6CF1F;
+}
+.loadspeed-medium .bglogo {
+	background-color: #FF5800;
+}
+.loadspeed-slow .bglogo {
+	background-color: #40C4DD;
+}
+
+
+.wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+h1, p {
+	margin: 20px 0;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 16px;
+}
+
+.pngy {
+	margin-bottom: 40px;
+}
